@@ -45,16 +45,12 @@ function decode(expr) {
         let a = expr.slice(i,(i+2));
         if (a==10) {
             someText += '.';
-            count +=2;
         } else if (a==11) {
             someText += '-';
-            count +=2;
-        } else if (a == 00) {
-            count +=2;
         } else if (a == '**') {
             someText += '*';
-            count +=2;
         }
+        count +=2;
         if (count == 10) {
             if (someText == '*****') {
                 fullText += ' ';
